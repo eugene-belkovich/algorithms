@@ -1,0 +1,18 @@
+def find(a):
+    res = []
+    res.insert(0, a[0])
+    res.insert(1, a[1])
+    res.insert(2, min(a[0]+a[2], a[1] + a[2]))
+
+    for i in range(3, len(a)):
+        print(res[i-1])
+        print(res[i-2])
+        print(a[i])
+        res.insert(i, min(res[i-1], res[i-2] + a[i]))
+    return res
+
+def main():
+    print('answer1 ', find([10, 15, 20]), 15)
+    print('answer2 ', find([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]), 6)
+
+main()
