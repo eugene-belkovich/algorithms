@@ -1,2 +1,5 @@
 .idea
 .xml
+/.idea
+/idea
+venv
